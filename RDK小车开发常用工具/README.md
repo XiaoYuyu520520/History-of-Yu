@@ -1,83 +1,103 @@
-# RDK 小车开发常用工具
+***
 
-> 针对 RDK（Robot Development Kit）小车开发场景收集整理的常用工具集，涵盖性能基准测试、ROS2 调试、USB/网络设备扫描、磁盘监控、雷达调试等实用工具。
+# 🤖 RDK 小车开发常用工具箱
 
----
+![OS](https://img.shields.io/badge/OS-Linux%20%7C%20Windows-blue)
+![Python](https://img.shields.io/badge/Python-3.8+-green.svg)
+![ROS2](https://img.shields.io/badge/ROS2-Jazzy-orange.svg)
 
-## 目录
-
-- [CPU 基准测试](#cpu-基准测试)
-- [磁盘工具](#磁盘工具)
-- [ROS2 调试](#ros2-调试)
-- [USB 扫描](#usb-扫描)
-- [网络扫描](#网络扫描)
-- [雷达调试](#雷达调试)
-- [实用工具](#实用工具)
+> 本项目是针对 **RDK (Robot Development Kit) 小车** 开发场景收集整理的专属工具集。涵盖了底层性能评估、系统硬件监控、外设状态扫描、网络探测以及 ROS2 节点诊断等常用功能，旨在提升机器人开发与调试效率。
 
 ---
 
-## CPU 基准测试
+## 📑 目录
 
-评估 RDK 小车 CPU 性能的工具。
+- [📁 项目结构](#-项目结构)
+- [🧮 CPU 与性能基准测试](#-cpu-与性能基准测试)
+- [💾 磁盘与 I/O 工具](#-磁盘与-io-工具)
+- [🦊 ROS2 调试助手](#-ros2-调试助手)
+- [🔌 USB 与外设扫描](#-usb-与外设扫描)
+- [🌐 局域网网络扫描](#-局域网网络扫描)
+- [📡 激光雷达调试](#-激光雷达调试)
+- [🧰 实用小脚本](#-实用小脚本)
+- [⚙️ 开发与配置规范](#️-开发与配置规范)
 
-### `cpu-测试/cpu-benchmark/`（C++）
+---
 
-高性能 CPU 基准测试二进制程序。测试内容包括：
-- 整数运算（加法、乘法、除法、取模）
-- 单精度 / 双精度浮点运算（加法、乘法、FMA）
-- 核间延迟测试
-- 生成热力图 PNG
+## 📁 项目结构
 
+```text
+RDK小车开发常用工具/
+├── CPU测试/
+│   └── cpu-benchmark/         # C++ CPU 性能基准测试 (整数/浮点/核间延迟)
+├── CPU&磁盘基准测试/
+│   ├── CPU单核基准测试.py       # Python 单核跑分脚本
+│   └── 磁盘IO速度测试.py        # 顺序读写吞吐量测试
+├── 磁盘工具/
+│   └── disk_monitor.py        # 实时磁盘 I/O 监控 (%util, 读写速度)
+├── 局域网设备扫描/
+│   ├── network_linux.py       # Linux 基础 Ping 扫描
+│   ├── network_linux_v2.py    # Linux 增强版扫描 (含 MAC、主机名)
+│   ├── network_windows.py     # Windows 局域网扫描
+│   └── scan_results.txt
+├── wlan_scan/                 # 跨平台高级网络扫描框架 (ARP/TCP/多线程)
+├── USB_scan/                  # USB 设备/雷达串口扫描与数据解析
+├── ros2_helper/               # ROS2 辅助调试工具 (话题解析、消息导出)
+└── 文件夹结构打印工具/
+    └── tree_交互式输入路径.py   # 自定义目录树打印 (自动忽略特定文件夹)
+```
+
+---
+
+## 🧮 CPU 与性能基准测试
+
+评估 RDK 开发板核心算力与调度性能。
+
+### 1. 高性能基准测试 (C++)
+位于 `CPU测试/cpu-benchmark/`，通过编译型语言深度压榨硬件性能。
+*   **测试项**：整数运算、单/双精度浮点运算 (FMA)、多核间通信延迟。
+*   **输出**：终端报告与热力图 PNG。
 ```bash
-cd "cpu-测试/cpu-benchmark"
+cd "CPU测试/cpu-benchmark"
 ./cpu-benchmark
 ```
 
-### `CPU和磁盘基准测试工具/CPU 单核基准测试脚本.py`（Python）
-
-Python 实现的单核 CPU 基准测试，通过质数查找（整数）和三角函数 / 平方根运算（浮点）评估性能，输出类 Geekbench 评分。
-
+### 2. 轻量级单核跑分 (Python)
+位于 `CPU&磁盘基准测试/CPU单核基准测试.py`。
+*   **测试项**：通过质数查找与三角函数/平方根运算评估单核极限性能。
+*   **输出**：类 Geekbench 评分。
 ```bash
-python "CPU和磁盘基准测试工具/CPU 单核基准测试脚本.py"
+python "CPU&磁盘基准测试/CPU单核基准测试.py"
 ```
 
 ---
 
-## 磁盘工具
+## 💾 磁盘与 I/O 工具
 
-### `CPU和磁盘基准测试工具/磁盘 IO 速度测试 Python 脚本.py`
-
-磁盘顺序读写吞吐量测试。创建临时文件，依次执行顺序写入 → 缓存清理（需 sudo）→ 顺序读取，以 B/KB/MB/GB 每秒报告结果。
-
+### 1. 吞吐量极限测试
+位于 `CPU&磁盘基准测试/磁盘IO速度测试.py`。创建临时文件，执行顺序写入 → 缓存清理 → 顺序读取，输出 B/KB/MB/GB/s 级别报告。
 ```bash
-sudo python "CPU和磁盘基准测试工具/磁盘 IO 速度测试 Python 脚本.py"
+sudo python "CPU&磁盘基准测试/磁盘IO速度测试.py"
 ```
 
-### `磁盘工具/disk_monitor.py`
-
-基于 `iostat -x` 的实时磁盘 I/O 监控器。持续显示指定挂载点的读取速度（MB/s）、写入速度（MB/s）和磁盘繁忙率（`%util`）。支持 Ctrl+C 退出。
-
+### 2. 实时 I/O 监控器
+位于 `磁盘工具/disk_monitor.py`。基于 `iostat -x` 实现，实时刷新目标挂载点的读写速率与磁盘繁忙率（`%util`）。
 ```bash
 python 磁盘工具/disk_monitor.py
 ```
 
 ---
 
-## ROS2 调试
+## 🦊 ROS2 调试助手
 
-### `ros2_helper/`
+位于 `ros2_helper/`。一个完整的 ROS2 话题交互式扫描与诊断终端工具。
 
-完整的 ROS2 话题扫描与诊断工具，支持交互式选择、QoS 解析、消息预览和结果导出。
-
-**功能特性：**
-- 扫描当前所有活跃 ROS2 话题
-- 解析 QoS 配置（可靠性、持久性、历史记录、深度等）
-- 捕获并解析消息样本（图像、IMU、激光雷达、里程计等）
-- 交互式多选话题
-- 导出结果为 JSON / YAML 格式
-
-**安装与使用：**
-
+*   **特性**：
+    *   一键扫描所有活跃节点与话题。
+    *   深度解析 QoS 配置（可靠性、深度、持久性等）。
+    *   支持捕获并解析复杂消息（图像、IMU、雷达、里程计）。
+    *   支持将节点拓扑与消息快照导出为 JSON/YAML。
+*   **安装与运行**：
 ```bash
 cd ros2_helper
 pip install -r requirements.txt
@@ -87,137 +107,83 @@ ros2-helper
 
 ---
 
-## USB 扫描
+## 🔌 USB 与外设扫描
 
-### `USB_scan/`
+位于 `USB_scan/`。跨平台的 USB 插拔监控与记录工具。
 
-跨平台 USB 设备扫描与实时监控工具。
-
-**功能特性：**
-- **扫描模式**：快照当前所有 USB 设备，写入 Markdown 日志
-- **监控模式**：实时监听 USB 插拔事件（添加 / 移除）
-- Linux 版基于 `pyudev`，Windows 版基于 WMI
-
+*   **特性**：Linux 基于 `pyudev`，Windows 基于 `WMI`。支持生成 Markdown 格式的设备快照日志。
+*   **运行模式**：
 ```bash
 cd USB_scan
-# 扫描模式
+# 生成当前设备快照
 python main.py scan
-# 监控模式
+
+# 实时监听设备插拔事件
 python main.py monitor
 ```
 
 ---
 
-## 网络扫描
+## 🌐 局域网网络扫描
 
-### `wlan_scan/`（完整扫描框架）
+探测局域网内的其他设备（如上位机、从机、工控机等）。
 
-功能丰富的跨平台局域网扫描器。
-
-**功能特性：**
-- 子网自动检测
-- 默认网关查找（含公网 IP 获取、路由追踪）
-- 高并发 ARP Ping 局域网设备发现
-- TCP 端口扫描（支持常见端口列表和全端口扫描）
-- 设备识别（MAC 地址、主机名、厂商 OUI 识别）
-- 多种输出格式：彩色终端、JSON、CSV
-- 交互式菜单模式
-
+### 1. 高级网络扫描框架 (`wlan_scan/`)
+*   **特性**：子网与网关自动检测、高并发 ARP Ping、TCP 全端口/常用端口扫描、OUI 厂商识别。支持交互式菜单及 CSV/JSON 导出。
 ```bash
 cd wlan_scan
 pip install -r requirements.txt
 python main.py --interactive
 ```
 
-### `局域网设备扫描/`（轻量脚本）
-
-简洁的局域网设备发现脚本，适合快速使用。
-
-| 脚本 | 适用平台 |
-|------|----------|
-| `network_linux.py` | Linux - 基础 Ping 扫描 |
-| `network_linux_v2.py` | Linux - 增强版（含 MAC、主机名） |
-| `network_windows.py` | Windows |
-
+### 2. 轻量级扫描脚本 (`局域网设备扫描/`)
+免去繁杂依赖，开箱即用的单文件脚本（区分 Linux 与 Windows 版本）。
 ```bash
-python "局域网设备扫描/network_linux.py"
+python "局域网设备扫描/network_linux_v2.py"
 ```
 
 ---
 
+## 📡 激光雷达调试
 
+位于 `USB_scan/code_秦嘉伟_20260317/雷达/`。提供从底层串口读取到上层可视化的完整链路。
 
-项目结构
-
-RDK小车开发常用工具/
-├── 磁盘工具/
-│   └── disk_monitor.py        # 磁盘监控
-├── 局域网设备扫描/
-│   ├── network_linux.py       # Linux 局域网扫描
-│   ├── network_linux_v2.py
-│   ├── network_windows.py     # Windows 局域网扫描
-│   └── scan_results.txt
-├── 文件夹结构打印工具/
-│   └── tree_交互式输入路径.py
-├── CPU测试/
-│   └── cpu-benchmark/         # C++ CPU性能基准测试
-├── CPU&磁盘基准测试/
-│   ├── 磁盘IO速度测试.py
-│   └── CPU单核基准测试.py
-├── ros2_helper/               # ROS2 辅助工具（解析、保存、扫描、UI）
-├── USB_scan/                  # USB/雷达串口扫描、数据解析
-├── wlan_scan/                 # 无线网络扫描工具
-│   ├── core/      # 日志+网络工具
-│   ├── discovery/ # 网关/子网发现
-│   ├── models/    # 设备/扫描数据模型
-│   ├── output/    # 控制台/CSV/JSON 输出
-│   ├── scanner/   # 局域网+端口扫描
-│   └── main.py
-└── README.md
-
-
-
-
-## 雷达调试
-
-### `USB_scan/code_秦嘉伟_20260317/雷达/`
-
-激光雷达串口调试与可视化工具。
-
-**工具列表：**
-
-| 文件 | 用途 |
-|------|------|
-| `COM3_link.py` | 串口连接雷达，原始十六进制数据读取 |
-| `decode.py` | 雷达协议解码（角度、距离、校验和验证） |
-| `display.py` | Pygame 实时 360° 极坐标雷达可视化 |
+| 工具脚本 | 功能描述 |
+| :--- | :--- |
+| `COM3_link.py` | 建立串口连接，实时读取并打印原始十六进制数据。 |
+| `decode.py` | 雷达底层协议解码，处理校验和，提取真实距离与角度。 |
+| `display.py` | 基于 Pygame 的 2D 极坐标系，**实时 360° 渲染雷达点云**。 |
 
 ```bash
-# 实时可视化雷达数据
+# 启动雷达实时可视化
 python "USB_scan/code_秦嘉伟_20260317/雷达/display.py"
 ```
 
 ---
 
-## 实用工具
+## 🧰 实用小脚本
 
-### `文件夹结构打印忽略特殊文件夹/tree_交互式输入路径.py`
-
-交互式目录树打印工具，以 `tree` 风格输出目录结构，自动忽略 `venv`、`__pycache__`、`node_modules`、`.git`、`dist`、`build` 等文件夹。支持深度限制和 `~` 路径展开。
-
+### 目录结构净化打印工具
+位于 `文件夹结构打印工具/tree_交互式输入路径.py`。
+*   **特性**：替代原生 `tree` 命令。自动过滤开发过程中的噪音文件夹（如 `venv`, `__pycache__`, `node_modules`, `.git`, `build` 等），支持限定扫描深度。
 ```bash
-python "文件夹结构打印忽略特殊文件夹/tree_交互式输入路径.py"
+python "文件夹结构打印工具/tree_交互式输入路径.py"
 ```
 
 ---
 
-## 系统要求
+## ⚙️ 开发与配置规范
 
-- **操作系统**：Linux（主要）、Windows（部分工具支持）
-- **Python**：3.8+
-- **ROS2**：Jazzy（ros2_helper 需要）
-- **C++ 工具**：gcc/clang、make、zlib（cpu-benchmark 需要）
+为了保持工具集的易用性和代码整洁，后续在修改或新增 Python 工具脚本时，请遵循以下规范：
+*   **配置项前置**：脚本中如有需要用户修改的变量（如：雷达串口号 `COM3`/`/dev/ttyUSB0`、网络扫描超时时间、基准测试循环次数等），请统一将其作为**可配置参数提取到代码文件顶部，紧跟在导入库（`import`）的下方**。避免让使用者在代码逻辑深处寻找修改点。
 
-## 许可
+## 💻 系统要求
 
-本项目工具仅供 RDK 小车开发调试使用。
+- **核心运行环境**：Linux (Ubuntu / RDK 官方系统优先)
+- **语言依赖**：Python 3.8+
+- **中间件**：ROS2 Jazzy (仅 `ros2_helper` 强依赖)
+- **编译工具**：`gcc/clang`, `make`, `zlib` (针对 C++ 基准测试模块)
+
+## 📄 许可
+
+本项目内置工具脚本主要供 RDK 小车及相关边缘计算设备的内部开发与调试使用。
