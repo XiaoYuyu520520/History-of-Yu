@@ -11,7 +11,7 @@
 
 ## 📸 屏幕截图
 
-> *(在此处替换为你的实际截图路径，例如：`![Dashboard Screenshot](./docs/screenshot.png)`)*
+> ![Dashboard Screenshot](Linux开发板性能监视器/collector/display.png)
 
 ## ✨ 核心特性
 
