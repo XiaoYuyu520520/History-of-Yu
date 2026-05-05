@@ -11,7 +11,7 @@
 
 ## 📸 屏幕截图
 
-> ![Dashboard Screenshot](Linux开发板性能监视器/collector/display.png)
+> ![Dashboard Screenshot](collector/display.png)
 
 ## ✨ 核心特性
 
