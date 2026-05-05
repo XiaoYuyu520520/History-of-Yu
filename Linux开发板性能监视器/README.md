@@ -28,8 +28,6 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/your-username/hardware-monitor.git
-cd hardware-monitor
 
 # 2. 一键启动 (推荐)
 bash start.sh
