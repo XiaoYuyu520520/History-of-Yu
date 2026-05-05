@@ -1,0 +1,16 @@
+NetSpeed v1.0.0
+Release date: 2026-05-05
+Build commit: unknown
+
+Contents:
+  bin/       - Pre-compiled binaries (ready to run)
+  src/       - Full source code (build from source)
+
+Quick start:
+  # Run directly
+  ./bin/netspeed
+
+  # Or build from source
+  cd src && bash build.sh
+
+  # Open http://localhost:7777
