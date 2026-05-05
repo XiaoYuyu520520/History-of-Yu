@@ -1,0 +1,18 @@
+ros2:
+  distro: jazzy
+  base_path: /opt/ros
+  ros2_bin: ${base_path}/${distro}/bin/ros2
+
+scan:
+  timeout: 5
+  msg_parse_timeout: 5
+  refresh_interval: 2
+  max_display: 20
+  strict_mode: false
+
+ui:
+  theme: default
+
+output:
+  default_format: both
+  save_dir: ~/ros2_scans
