@@ -1,0 +1,1474 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>doc2x-edit-expost-html</title>
+        <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+             html {
+              line-height: 1.15; /* 1 */
+              -webkit-text-size-adjust: 100%; /* 2 */
+            }
+            body {
+              padding: 20px;
+              margin: 0;
+            }
+            main {
+              display: block;
+            }
+            h1 {
+              font-size: 2em;
+              margin: 0.67em 0;
+            }
+            hr {
+              box-sizing: content-box; /* 1 */
+              height: 0; /* 1 */
+              overflow: visible; /* 2 */
+            }
+            pre {
+              font-family: monospace, monospace; /* 1 */
+              font-size: 1em; /* 2 */
+            }
+            a {
+              background-color: transparent;
+            }
+            abbr[title] {
+              border-bottom: none; /* 1 */
+              text-decoration: underline; /* 2 */
+              text-decoration: underline dotted; /* 2 */
+            }
+            b,
+            strong {
+              font-weight: bolder;
+            }
+            code,
+            kbd,
+            samp {
+              font-family: monospace, monospace; /* 1 */
+              font-size: 1em; /* 2 */
+            }
+            small {
+              font-size: 80%;
+            }
+            sub,
+            sup {
+              font-size: 75%;
+              line-height: 0;
+              position: relative;
+              vertical-align: baseline;
+            }
+            sub {
+              bottom: -0.25em;
+            }
+            sup {
+              top: -0.5em;
+            }
+            img {
+              border-style: none;
+            }
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+              font-family: inherit; /* 1 */
+              font-size: 100%; /* 1 */
+              line-height: 1.15; /* 1 */
+              margin: 0; /* 2 */
+            }
+            button,
+            input { /* 1 */
+              overflow: visible;
+            }
+            button,
+            select { /* 1 */
+              text-transform: none;
+            }
+            button,
+            [type="button"],
+            [type="reset"],
+            [type="submit"] {
+              -webkit-appearance: button;
+            }
+            button::-moz-focus-inner,
+            [type="button"]::-moz-focus-inner,
+            [type="reset"]::-moz-focus-inner,
+            [type="submit"]::-moz-focus-inner {
+              border-style: none;
+              padding: 0;
+            }
+            button:-moz-focusring,
+            [type="button"]:-moz-focusring,
+            [type="reset"]:-moz-focusring,
+            [type="submit"]:-moz-focusring {
+              outline: 1px dotted ButtonText;
+            }
+            fieldset {
+              padding: 0.35em 0.75em 0.625em;
+            }
+            legend {
+              box-sizing: border-box; /* 1 */
+              color: inherit; /* 2 */
+              display: table; /* 1 */
+              max-width: 100%; /* 1 */
+              padding: 0; /* 3 */
+              white-space: normal; /* 1 */
+            }
+            progress {
+              vertical-align: baseline;
+            }
+            textarea {
+              overflow: auto;
+            }
+            [type="checkbox"],
+            [type="radio"] {
+              box-sizing: border-box; /* 1 */
+              padding: 0; /* 2 */
+            }
+            [type="number"]::-webkit-inner-spin-button,
+            [type="number"]::-webkit-outer-spin-button {
+              height: auto;
+            }
+            [type="search"] {
+              -webkit-appearance: textfield; /* 1 */
+              outline-offset: -2px; /* 2 */
+            }
+            [type="search"]::-webkit-search-decoration {
+              -webkit-appearance: none;
+            }
+            ::-webkit-file-upload-button {
+              -webkit-appearance: button; /* 1 */
+              font: inherit; /* 2 */
+            }
+            details {
+              display: block;
+            }
+            summary {
+              display: list-item;
+            }
+            [hidden] {
+              display: none;
+            }
+             table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+              }
+              table thead {
+                background-color: #e5e5e5;
+              }
+              table td {
+                padding: 8px;
+                /*background-color: #e5e5e5;*/
+                border: 1px solid #ccc; /* 可选，添加边框样式 */
+              }
+              table th {
+                padding: 8px;
+                /*background-color: #e5e5e5;*/
+                border: 1px solid #ccc; /* 可选，添加边框样式 */
+              }
+              h1, h2, h3, h4, h5, h6 {
+                margin-bottom: 20px;
+              }
+              p {
+                margin-top: 20px;
+                text-indent: 2em;
+                margin-bottom: 20px;
+              }
+        </style>
+        <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      </head>
+      <body style="padding: 40px;">
+        <div class="section-container html-wrap"><div class="custom-html-style"><div class="flex flex-col"><p>好的，这是您提供的终端日志分析。</p>
+<p>这看起来是您通过 SSH 登录到一台<strong>华为 Atlas 200I DK A2</strong> AI 开发者套件的终端输出。</p>
+<hr>
+<h3><strong>核心信息解读</strong></h3>
+<p>根据您执行的命令和系统返回的信息，可以总结出以下几点：</p>
+<ol>
+<li>
+<p><strong>设备信息</strong>: 您正在使用的是一台名为 <code>davinci-mini</code> 的设备，其型号为 <strong>Atlas 200I DK A2</strong>。这是一个用于 AI 开发的嵌入式开发板。</p>
+</li>
+<li>
+<p><strong>系统与架构</strong>:</p>
+<ul>
+<li>
+<p>操作系统: <strong>Ubuntu 22.04.5 LTS</strong></p>
+</li>
+<li>
+<p>CPU 架构: <strong>aarch64</strong> (ARM 64位架构)</p>
+</li>
+<li>
+<p>CPU 核心: <code>lscpu</code> 命令显示有 <strong>4个 CPU 核心</strong>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>NPU 状态查询</strong>:</p>
+<ul>
+<li>
+<p>您尝试了 <code>mpu-smi</code> 和 <code>npu-info</code> 等命令，但系统提示找不到。这说明正确的命令是 <code>npu-smi</code>。</p>
+</li>
+<li>
+<p>您成功执行了 <code>npu-smi info</code> 命令，这是<strong>昇腾（Ascend）AI处理器</strong>专用的系统信息工具，类似于 NVIDIA 显卡的 <code>nvidia-smi</code>。</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong><code>npu-smi info</code> 输出详解</strong></h3>
+<p>这是日志中最关键的部分，它展示了 NPU (神经网络处理单元) 的实时状态。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align: left;">参数</th><th style="text-align: left;">值</th><th style="text-align: left;">解释</th></tr></thead><tbody><tr><td style="text-align: left;"><strong>NPU Name</strong></td><td style="text-align: left;"><code>310B4</code></td><td style="text-align: left;">这是昇腾 AI 处理器的具体型号，<strong>Ascend 310B</strong>。</td></tr><tr><td style="text-align: left;"><strong>Health</strong></td><td style="text-align: left;"><code>OK</code></td><td style="text-align: left;">NPU 的健康状态正常。</td></tr><tr><td style="text-align: left;"><strong>Power(W)</strong></td><td style="text-align: left;"><code>7.4</code></td><td style="text-align: left;">NPU 当前的功耗是 7.4 瓦。</td></tr><tr><td style="text-align: left;"><strong>Temp(C)</strong></td><td style="text-align: left;"><code>41</code></td><td style="text-align: left;">NPU 当前的温度是 41 摄氏度。</td></tr><tr><td style="text-align: left;"><strong>AICore(%)</strong></td><td style="text-align: left;"><code>0</code></td><td style="text-align: left;"><strong>AI 核心利用率为 0%</strong>。这表明 NPU 当前处于空闲状态，没有在执行计算任务。</td></tr><tr><td style="text-align: left;"><strong>Memory-Usage(MB)</strong></td><td style="text-align: left;"><code>1469 / 3513</code></td><td style="text-align: left;">NPU 的专用内存（HBM）使用了 1469 MB，总量约为 3.5 GB。即使 AI 核心空闲，系统和驱动也会占用一部分基础内存。</td></tr><tr><td style="text-align: left;"><strong>Hugepages-Usage</strong></td><td style="text-align: left;"><code>15 / 15</code></td><td style="text-align: left;">大页内存已完全分配使用，这通常用于提升 AI 计算等高性能应用的内存访问效率。</td></tr></tbody></table>
+<h3><strong>总结</strong></h3>
+<p>您成功登录到了您的 Atlas 200I DK A2 开发板，并使用 <code>npu-smi</code> 工具检查了其核心 AI 计算单元 (NPU) 的状态。</p>
+<p>从结果来看，<strong>您的 NPU 设备工作正常、健康状况良好，但目前处于空闲状态</strong>。</p>
+<p>怎么在这个开发板上转换onnx模型为om模型</p>
+<p>好的，在您的 Atlas 200I DK A2 开发板上将 ONNX 模型转换为昇腾（Ascend）专用的 OM (Offline Model) 模型，核心是使用昇腾 CANN (Compute Architecture for Neural Networks) 工具包中提供的 <strong><code>atc</code></strong> (Ascend Tensor Compiler) 命令。</p>
+<p>根据您之前提供的日志，您的环境已经基本就绪。下面是详细的步骤和说明。</p>
+<hr>
+<h3><strong>核心工具：ATC 命令</strong></h3>
+<p><code>atc</code> 命令是模型转换的枢纽。它的作用是：</p>
+<ol>
+<li>
+<p><strong>解析模型</strong>：读取 ONNX、TensorFlow、PyTorch 等框架的模型文件。</p>
+</li>
+<li>
+<p><strong>算子融合</strong>：将模型中的多个算子（Operator）融合成昇腾 NPU 支持的高性能算子。</p>
+</li>
+<li>
+<p><strong>优化图结构</strong>：对计算图进行优化，减少计算量和内存占用。</p>
+</li>
+<li>
+<p><strong>生成离线模型</strong>：编译生成高度优化、适配昇腾 NPU 硬件的 <code>.om</code> 文件。</p>
+</li>
+</ol>
+<hr>
+<h3><strong>转换步骤</strong></h3>
+<h4><strong>第 1 步：准备环境</strong></h4>
+<p>在执行 <code>atc</code> 命令之前，您需要先加载 CANN 工具包的环境变量。这通常是通过执行一个脚本来完成的。默认安装路径下，该脚本位于 <code>/usr/local/Ascend/ascend-toolkit/set_env.sh</code>。</p>
+<p>在您的终端中运行：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-built_in">source</span> /usr/local/Ascend/ascend-toolkit/set_env.sh</div></div><p><strong>提示</strong>: 您可以把这行命令添加到 <code>~/.bashrc</code> 文件的末尾，这样每次登录时就会自动加载环境变量，无需手动执行。</p>
+<h4><strong>第 2 步：准备 ONNX 模型</strong></h4>
+<p>首先，您需要将您的 <code>.onnx</code> 模型文件上传到您的 Atlas 开发板上，例如上传到 <code>~</code> (root的主目录) 下。</p>
+<p>假设您有一个名为 <code>my_model.onnx</code> 的模型。</p>
+<h4><strong>第 3 步：确定关键参数</strong></h4>
+<p><code>atc</code> 命令需要一些关键参数才能正确转换模型。</p>
+<ol>
+<li>
+<p><strong>SoC 版本 (<code>--soc_version</code>)</strong>: 这是最重要的参数之一，它告诉 ATC 为哪款具体的芯片进行编译。</p>
+<ul>
+<li>
+<p>从您之前的 <code>npu-smi</code> 输出中，我们可以看到 NPU 型号是 <strong>310B4</strong>。</p>
+</li>
+<li>
+<p>因此，对应的 SoC 版本就是 <code>Ascend310B4</code>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>输入格式与维度 (<code>--input_shape</code>)</strong>: 您必须明确告诉 ATC 模型的输入张量（Tensor）的形状。</p>
+<ul>
+<li>
+<p>格式通常是 <code>N,C,H,W</code> (批量, 通道, 高度, 宽度)。</p>
+</li>
+<li>
+<p>例如，一个处理 <code>224x224</code> 的3通道彩色图片，批量为1的模型，其 <code>input_shape</code> 就是 <code>1,3,224,224</code>。</p>
+</li>
+<li>
+<p><strong>注意</strong>：您需要知道您的 ONNX 模型的输入节点名称。通常可以用 <a href="https://netron.app/">Netron</a> 这样的工具打开 <code>.onnx</code> 文件查看。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>框架类型 (<code>--framework</code>)</strong>: 指明原始模型的框架。对于 ONNX，该值为 <code>5</code>。</p>
+</li>
+</ol>
+<h4><strong>第 4 步：执行 ATC 转换命令</strong></h4>
+<p>现在，我们可以组合出一个完整的 <code>atc</code> 命令。</p>
+<p><strong>基础转换示例：</strong></p>
+<p>假设您的 ONNX 模型 (<code>my_model.onnx</code>) 有一个名为 <code>input_tensor</code> 的输入节点，期望的输入形状是 <code>1,3,224,224</code>。</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">atc --model=./my_model.onnx \
+    --framework=5 \
+    --output=./my_model_output \
+    --soc_version=Ascend310B4 \
+    --input_shape=<span class="hljs-string">"input_tensor:1,3,224,224"</span></div></div><p><strong>命令解析:</strong></p>
+<ul>
+<li>
+<p><code>--model=./my_model.onnx</code>: 指定输入的 ONNX 模型文件路径。</p>
+</li>
+<li>
+<p><code>--framework=5</code>: <code>5</code> 代表 ONNX 框架。</p>
+</li>
+<li>
+<p><code>--output=./my_model_output</code>: 指定输出路径和文件名前缀。ATC 会自动生成一个名为 <code>my_model_output.om</code> 的文件。</p>
+</li>
+<li>
+<p><code>--soc_version=Ascend310B4</code>: <strong>关键！</strong> 指定目标芯片为 Ascend 310B。</p>
+</li>
+<li>
+<p><code>--input_shape="input_tensor:1,3,224,224"</code>: <strong>关键！</strong> 指定模型输入节点的名称和其形状。</p>
+</li>
+</ul>
+<p><strong>执行后，如果一切顺利，您会看到类似以下的成功信息：</strong></p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left"></div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">ATC run success</div></div><p>然后您可以通过 <code>ls</code> 命令看到当前目录下生成了 <code>my_model_output.om</code> 文件。</p>
+<hr>
+<h3><strong>高级选项与常见问题</strong></h3>
+<ol>
+<li>
+<p><strong>动态 Batch Size / 动态分辨率</strong></p>
+<p>如果您希望模型能处理变化的批量大小或图像尺寸，可以使用动态参数。例如，支持 batch size 从1到8：</p>
+</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    atc --model=./my_model.onnx \
+        --framework=5 \
+        --output=./my_model_dynamic \
+        --soc_version=Ascend310B4 \
+        --input_shape=<span class="hljs-string">"input_tensor:-1,3,224,224"</span> \
+        --dynamic_batch_size=<span class="hljs-string">"1,2,4,8"</span> 
+    </div></div><ul>
+<li>
+<p><code>input_shape</code> 中的 <code>-1</code> 表示该维度是动态的。</p>
+<pre><code>* `--dynamic_batch_size` 指定了支持的 batch size 档位。
+</code></pre>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p><strong>AIPP (人工智能预处理)</strong></p>
+<p>昇腾芯片支持在硬件上完成数据预处理（如图像缩放、色域转换、减均值/归一化等），这被称为 AIPP。这可以大大减轻 CPU 的负担，提升端到端性能。配置 AIPP 需要一个单独的配置文件。</p>
+<ul>
+<li>这是一个非常强大的性能优化功能，如果您的应用场景需要，建议查阅<a href="https://www.google.com/search?q=https://www.hiascend.com/document/detail/zh/CANN/80RC1/developmenttools/devtool/atlasatc_16_0114.html">官方 AIPP 文档</a>来配置。</li>
+</ul>
+</li>
+<li>
+<p><strong>算子不支持问题</strong></p>
+<p>如果转换失败，并提示某个 "Operator" 不支持，意味着您的 ONNX 模型中包含了当前 CANN 版本无法转换的算子。解决方法通常是：</p>
+<ul>
+<li>
+<p><strong>修改模型</strong>：尝试用其他支持的算子组合来替换不支持的算子。</p>
+</li>
+<li>
+<p><strong>升级 CANN 版本</strong>：新版本的 CANN 可能会支持更多的算子。</p>
+</li>
+<li>
+<p><strong>自定义算子</strong>：对于高级用户，可以开发自定义算子来弥补支持的不足。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>总结一下，对您来说最直接的操作就是：</strong></p>
+<ol>
+<li>
+<p><code>source /usr/local/Ascend/ascend-toolkit/set_env.sh</code></p>
+</li>
+<li>
+<p>上传你的 <code>.onnx</code> 文件。</p>
+</li>
+<li>
+<p>用 Netron 查看模型输入节点的名称和形状。</p>
+</li>
+<li>
+<p>运行 <code>atc</code> 命令，并确保 <code>--soc_version</code> 设置为 <code>Ascend310B4</code>，同时正确设置 <code>--input_shape</code>。</p>
+</li>
+</ol>
+<p>(base) root@davinci-mini:~# source /usr/local/Ascend/ascend-toolkit/set_env.sh</p>
+<p>(base) root@davinci-mini:~# atc</p>
+<p>ATC start working now, please wait for a moment.</p>
+<p>...</p>
+<p>ATC run failed, Please check the detail log, Try 'atc --help' for more information</p>
+<p>E10007: [--framework] is required. The value must be [0(Caffe) or 1(MindSpore) or 3(TensorFlow) or 5(Onnx)].</p>
+<p>(base) root@davinci-mini:~#</p>
+<p>好的，我们来看一下这个报错。</p>
+<p>这个命令运行失败的原因是您只输入了 <code>atc</code> 这一个主命令，而没有提供任何它需要工作的<strong>必要参数</strong>。</p>
+<p>报错信息 <code>E10007: [--framework] is required</code> 非常明确地指出了问题：<strong>缺少 [--framework] 这个参数</strong>。<code>atc</code> 工具需要你告诉它，你要转换的模型来自于哪个深度学习框架（比如 ONNX、TensorFlow 等）。</p>
+<hr>
+<h3><strong>正确的命令格式</strong></h3>
+<p>您需要构建一个完整的命令，把所有必要的信息都提供给 <code>atc</code> 工具。根据我们之前的讨论，您应该使用下面这个模板，并填入您自己模型的具体信息。</p>
+<p><strong>正确命令的模板：</strong></p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">atc --model=你的模型.onnx \
+    --framework=5 \
+    --output=你的输出模型名称 \
+    --input_shape=<span class="hljs-string">"你的模型输入节点名称:1,3,224,224"</span> \
+    --soc_version=Ascend310B4</div></div><h3><strong>必需参数详解</strong></h3>
+<ul>
+<li>
+<p><code>--model</code>: 你的 <code>.onnx</code> 输入模型文件的路径。</p>
+</li>
+<li>
+<p><code>--framework=5</code>: <strong>这个就是报错信息里提到的参数</strong>。你必须使用数字 <code>5</code> 来告诉 <code>atc</code> 工具你输入的是一个 ONNX 模型。</p>
+</li>
+<li>
+<p><code>--output</code>: 你希望生成的新 <code>.om</code> 模型文件的名称（和路径）。</p>
+</li>
+<li>
+<p><code>--input_shape</code>: 你必须明确指定模型的<strong>输入节点名称</strong>和它的<strong>形状</strong>（例如：批量, 通道, 高度, 宽度）。</p>
+</li>
+<li>
+<p><code>--soc_version=Ascend310B4</code>: 你必须告诉 <code>atc</code> 工具，要为你的这款特定芯片（Ascend 310B）进行编译。</p>
+</li>
+</ul>
+<p><strong>您的下一步是：</strong></p>
+<p>找到你的 ONNX 模型的输入节点名称和形状，然后使用上面的命令模板来构建一个完整的、正确的命令来执行。 👍</p>
+<p>需要退出base环境吗</p>
+<p>很好的问题！</p>
+<p>通常情况下<strong>不需要</strong>，但<strong>建议您退出</strong>。下面是详细解释：</p>
+<h3><strong>为什么“不需要”？</strong></h3>
+<ul>
+<li>
+<p>您已经通过 <code>source /usr/local/Ascend/ascend-toolkit/set_env.sh</code> 命令，在<strong>当前</strong>的终端会话（也就是这个 <code>(base)</code> 环境中）加载了昇腾 CANN 工具包的环境变量。</p>
+</li>
+<li>
+<p>这意味着，<code>atc</code> 命令的路径已经被正确添加，理论上可以直接运行。</p>
+</li>
+</ul>
+<h3><strong>为什么“建议退出”？ (最佳实践)</strong></h3>
+<ul>
+<li>
+<p><strong>避免潜在的冲突</strong>：<code>(base)</code> 环境是 Conda 的基础环境，它本身包含了一套独立的 Python 解释器和大量的库。这些库的版本<strong>有可能</strong>与昇腾工具链所依赖的系统库产生未知的冲突。</p>
+</li>
+<li>
+<p><strong>保持环境纯净</strong>：退出 Conda 环境后，您将使用系统的默认环境。这正是昇腾工具包设计时所预期的运行环境。在一个“干净”的环境中执行 <code>atc</code> 命令，可以最大限度地减少因环境问题导致的错误。</p>
+</li>
+<li>
+<p><strong>简化问题排查</strong>：如果 <code>atc</code> 命令在退出 <code>base</code> 环境后仍然报错，那么就可以基本排除是 Conda 环境造成的干扰，从而更容易定位问题的根源。</p>
+</li>
+</ul>
+<hr>
+<h3><strong>如何退出 <code>base</code> 环境？</strong></h3>
+<p>非常简单，只需在终端中运行以下命令：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">conda deactivate</div></div><p>执行后，您会发现命令行提示符前面的 <code>(base)</code> 字样消失了：</p>
+<ul>
+<li>
+<p><strong>退出前：</strong> <code>(base) root@davinci-mini:~#</code></p>
+</li>
+<li>
+<p><strong>退出后：</strong> <code>root@davinci-mini:~#</code></p>
+</li>
+</ul>
+<h3><strong>总结与建议</strong></h3>
+<p>为了保证模型转换过程的稳定和可靠，<strong>我建议您先执行 <code>conda deactivate</code> 退出 base 环境</strong>，然后再运行您完整的 <code>atc</code> 转换命令。</p>
+<p><strong>正确的操作流程应该是：</strong></p>
+<ol>
+<li><strong>退出 Conda 环境</strong></li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    conda deactivate
+    </div></div><ol start="2">
+<li><strong>加载昇腾环境变量（如果还没加载的话）</strong></li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    <span class="hljs-built_in">source</span> /usr/local/Ascend/ascend-toolkit/set_env.sh
+    </div></div><ol start="3">
+<li><strong>执行完整的 <code>atc</code> 转换命令</strong></li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    atc --model=你的模型.onnx --framework=5 ... (补全所有参数)
+    </div></div><p>我放了几个onnx模型在这里</p>
+<p>(base) root@davinci-mini:~# cd /root/onnx_to_om/</p>
+<p>(base) root@davinci-mini:~/onnx_to_om#</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# ls</p>
+<p>best.pt&nbsp; last.pt&nbsp; yolo_best_20251002_155016.onnx&nbsp; yolo_best_20251018_233416.onnx</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# ^C</p>
+<p>(base) root@davinci-mini:~/onnx_to_om#</p>
+<p>好的，您已经成功进入了存放模型的目录。</p>
+<p>从 <code>ls</code> 命令的输出看，您有四个文件：</p>
+<ul>
+<li>
+<p><code>yolo_best_20251002_155016.onnx</code>: 这是一个 <strong>ONNX 模型</strong>，可以用于转换。</p>
+</li>
+<li>
+<p><code>yolo_best_20251018_233416.onnx</code>: 这也是一个 <strong>ONNX 模型</strong>，可以用于转换。</p>
+</li>
+<li>
+<p><code>best.pt</code> 和 <code>last.pt</code>: 这两个是 <strong>PyTorch 模型</strong> (<code>.pt</code> 文件)。<code>atc</code> 工具<strong>不能</strong>直接转换 PyTorch 模型。您需要先在有 PyTorch 环境的机器上将它们导出为 ONNX 格式。</p>
+</li>
+</ul>
+<p>现在，我们就以 <code>yolo_best_20251018_233416.onnx</code> 为例，来完成转换。</p>
+<hr>
+<h3><strong>关键下一步：获取模型输入信息</strong></h3>
+<p>在执行 <code>atc</code> 命令前，我们还缺少一个最关键的信息：<strong>模型的输入节点名称 (input node name)</strong> 和 <strong>输入形状 (input shape)</strong>。</p>
+<p>每个 ONNX 模型都可能不同，你必须提供正确的信息，<code>atc</code> 才能成功转换。</p>
+<p><strong>获取这个信息的最佳方法是使用 Netron 工具：</strong></p>
+<ol>
+<li>
+<p><strong>下载模型到本地电脑</strong>：在 MobaXterm 的左侧，通常会有一个 SFTP 浏览器，您可以直接将开发板上的 <code>/root/onnx_to_om/yolo_best_20251018_233416.onnx</code> 文件拖拽到您的 Windows 电脑上。</p>
+</li>
+<li>
+<p><strong>在浏览器中打开 Netron</strong>：访问网址 <a href="https://netron.app">https://netron.app</a></p>
+</li>
+<li>
+<p><strong>打开模型文件</strong>：点击 "Open Model"，然后选择您刚刚从开发板下载的 <code>.onnx</code> 文件。</p>
+</li>
+<li>
+<p><strong>查看输入信息</strong>：</p>
+<ul>
+<li>
+<p>Netron 会将模型的网络结构可视化。</p>
+</li>
+<li>
+<p>找到最左侧的<strong>输入节点</strong>（通常叫 <code>input</code>、<code>images</code> 或类似的名字），点击它。</p>
+</li>
+<li>
+<p>在右侧弹出的属性栏里，您会看到 <code>name</code> 和 <code>shape</code>。例如：<code>name: images</code>，<code>shape: 1,3,640,640</code>。</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong>执行转换命令</strong></h3>
+<p>假设通过 Netron，您查到输入信息如下（<strong>这只是一个常见的YOLO模型示例，请务必替换为您自己查到的真实信息</strong>）：</p>
+<ul>
+<li>
+<p><strong>输入节点名称 (name)</strong>: <code>images</code></p>
+</li>
+<li>
+<p><strong>输入形状 (shape)</strong>: <code>1,3,640,640</code></p>
+</li>
+</ul>
+<p>现在，您可以构建完整的 <code>atc</code> 命令了。</p>
+<p><strong>建议的操作流程：</strong></p>
+<ol>
+<li><strong>(建议) 退出 base 环境</strong>，保持环境纯净。</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    conda deactivate
+    </div></div><p><em>(提示符前面的 <code>(base)</code> 会消失)</em></p>
+<ol start="2">
+<li><strong>加载昇腾环境变量</strong>（如果之前退出了终端重连，就需要重新加载）。</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    <span class="hljs-built_in">source</span> /usr/local/Ascend/ascend-toolkit/set_env.sh
+    </div></div><ol start="3">
+<li><strong>执行 atc 命令进行转换</strong> (请确保在 <code>/root/onnx_to_om/</code> 目录下执行)。</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    atc --model=./yolo_best_20251018_233416.onnx \
+        --framework=5 \
+        --output=./yolo_best_20251018 \
+        --input_shape=<span class="hljs-string">"images:1,3,640,640"</span> \
+        --soc_version=Ascend310B4
+    </div></div><p><strong>命令解释:</strong></p>
+<ul>
+<li>
+<p><code>--model</code>: 指定当前目录下的 ONNX 文件。</p>
+</li>
+<li>
+<p><code>--framework=5</code>: 指明是 ONNX 模型。</p>
+</li>
+<li>
+<p><code>--output</code>: 指定输出的 OM 模型文件名前缀，它会自动生成 <code>yolo_best_20251018.om</code> 文件。</p>
+</li>
+<li>
+<p><code>--input_shape="images:1,3,640,640"</code>: <strong>请务必替换为您用 Netron 查到的真实名称和形状！</strong></p>
+</li>
+<li>
+<p><code>--soc_version=Ascend310B4</code>: 指定为您开发板的芯片型号。</p>
+</li>
+</ul>
+<p>如果命令成功执行，您会看到 <code>ATC run success</code> 的提示，并且通过 <code>ls</code> 命令可以看到新生成的 <code>.om</code> 文件。</p>
+<p>能使用python脚本获取获取模型输入信息吗</p>
+<p>当然可以！使用 Python 脚本来获取模型信息是在开发板上最高效的方法，完全可以避免来回传输文件。</p>
+<p>您需要使用 <code>onnx</code> 这个官方的 Python 库。</p>
+<p>下面是在您的 Atlas 开发板上完成这件事的完整步骤：</p>
+<hr>
+<h3><strong>第 1 步：安装 ONNX 库</strong></h3>
+<p>您的 <code>(base)</code> Conda 环境是安装新库的理想位置，可以避免与系统环境冲突。</p>
+<p>在终端中执行以下命令来安装 <code>onnx</code> 库：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">pip install onnx</div></div><p><em>（如果您的开发板网络访问 <code>pypi.org</code> 速度慢或有问题，可能需要配置 pip 使用国内的镜像源。）</em></p>
+<hr>
+<h3><strong>第 2 步：创建 Python 脚本</strong></h3>
+<p>在您存放模型的 <code>/root/onnx_to_om/</code> 目录下，创建一个名为 <code>inspect_onnx.py</code> 的文件。</p>
+<p>您可以使用 <code>vim</code> 编辑器：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">vim inspect_onnx.py</div></div><p>按 <code>i</code> 键进入插入模式，然后将下面的 Python 代码<strong>完整复制</strong>并粘贴进去：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">python</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-keyword">import</span> onnx
+<span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">get_model_inputs</span>(<span class="hljs-params">model_path</span>):
+    <span class="hljs-string">"""
+    加载ONNX模型并打印其输入节点的名称和形状。
+    """</span>
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-comment"># 1. 加载模型</span>
+        model = onnx.load(model_path)
+        
+        <span class="hljs-comment"># 2. 获取模型的输入信息 (model.graph.input 是一个列表)</span>
+        inputs = model.graph.<span class="hljs-built_in">input</span>
+        
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> inputs:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"错误: 在模型 '<span class="hljs-subst">{model_path}</span>' 中没有找到输入节点。"</span>)
+            <span class="hljs-keyword">return</span>
+
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"'<span class="hljs-subst">{model_path}</span>' 的输入信息:"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"-"</span> * <span class="hljs-number">30</span>)
+
+        <span class="hljs-comment"># 3. 遍历所有输入节点 (通常只有一个)</span>
+        <span class="hljs-keyword">for</span> i, input_node <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(inputs):
+            <span class="hljs-comment"># 获取输入名称</span>
+            name = input_node.name
+            
+            <span class="hljs-comment"># 获取输入的形状信息</span>
+            shape_proto = input_node.<span class="hljs-built_in">type</span>.tensor_type.shape
+            shape = []
+            <span class="hljs-keyword">for</span> dim <span class="hljs-keyword">in</span> shape_proto.dim:
+                <span class="hljs-comment"># 维度可能是数字 (dim_value) 或动态的名称 (dim_param)</span>
+                <span class="hljs-keyword">if</span> dim.HasField(<span class="hljs-string">'dim_value'</span>):
+                    shape.append(dim.dim_value)
+                <span class="hljs-keyword">elif</span> dim.HasField(<span class="hljs-string">'dim_param'</span>):
+                    <span class="hljs-comment"># 对于动态维度，我们用问号'?'或名称本身表示</span>
+                    shape.append(<span class="hljs-string">f"'<span class="hljs-subst">{dim.dim_param}</span>'(动态)"</span>) 
+                <span class="hljs-keyword">else</span>:
+                    shape.append(<span class="hljs-string">'?'</span>)
+
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  输入节点 <span class="hljs-subst">{i+<span class="hljs-number">1</span>}</span>:"</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"    -&gt; 名称 (Name):  <span class="hljs-subst">{name}</span>"</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"    -&gt; 形状 (Shape): <span class="hljs-subst">{shape}</span>"</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"-"</span> * <span class="hljs-number">30</span>)
+
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"处理模型 '<span class="hljs-subst">{model_path}</span>' 时发生错误: <span class="hljs-subst">{e}</span>"</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    <span class="hljs-comment"># 从命令行参数获取模型文件名</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(sys.argv) &lt; <span class="hljs-number">2</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"用法: python3 inspect_onnx.py &lt;你的模型.onnx&gt;"</span>)
+        sys.exit(<span class="hljs-number">1</span>)
+        
+    model_file = sys.argv[<span class="hljs-number">1</span>]
+    get_model_inputs(model_file)</div></div><p>粘贴完成后，按 <code>Esc</code> 键退出插入模式，然后输入 <code>:wq</code> 并回车，即可保存并退出 <code>vim</code>。</p>
+<hr>
+<h3><strong>第 3 步：运行脚本来查看模型信息</strong></h3>
+<p>现在，您可以直接运行这个脚本，并将您的 ONNX 模型文件名作为参数传给它。</p>
+<p><strong>例如，查看 <code>yolo_best_20251018_233416.onnx</code> 的信息：</strong></p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">python3 inspect_onnx.py yolo_best_20251018_233416.onnx</div></div><p><strong>您将会看到类似下面的输出（具体名称和形状取决于您的模型）：</strong></p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left"></div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">'yolo_best_20251018_233416.onnx' 的输入信息:
+------------------------------
+  输入节点 1:
+    -&gt; 名称 (Name):  images
+    -&gt; 形状 (Shape): [1, 3, 640, 640]
+------------------------------</div></div><p>或者，如果您的模型有动态批次大小（dynamic batch size）：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left"></div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">'yolo_best_20251018_233416.onnx' 的输入信息:
+------------------------------
+  输入节点 1:
+    -&gt; 名称 (Name):  images
+    -&gt; 形状 (Shape): ["'batch'(动态)", 3, 640, 640]
+------------------------------</div></div><h3><strong>总结</strong></h3>
+<p>现在，您已经通过脚本得到了最关键的两个信息：</p>
+<ol>
+<li>
+<p><strong>输入节点名称</strong>: 比如上面例子中的 <code>images</code></p>
+</li>
+<li>
+<p><strong>输入形状</strong>: 比如 <code>1,3,640,640</code></p>
+</li>
+</ol>
+<p>得到这些信息后，您就可以构建出完全正确的 <code>atc</code> 命令了。例如：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-comment"># 退出base环境</span>
+conda deactivate
+
+<span class="hljs-comment"># 加载环境变量</span>
+<span class="hljs-built_in">source</span> /usr/local/Ascend/ascend-toolkit/set_env.sh
+
+<span class="hljs-comment"># 执行转换</span>
+atc --model=./yolo_best_20251018_233416.onnx \
+    --framework=5 \
+    --output=./yolo_best_om \
+    --input_shape=<span class="hljs-string">"images:1,3,640,640"</span> \
+    --soc_version=Ascend310B4</div></div><p><strong>请务必将 <code>--input_shape</code> 中的 <code>"images:1,3,640,640"</code> 替换为您脚本输出的真实信息。</strong></p>
+<p>(base) root@davinci-mini:~/onnx_to_om# python3 inspect_onnx.py yolo_best_202510&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18_233416.onnx</p>
+<p>'yolo_best_20251018_233416.onnx' 的输入信息:</p>
+<hr>
+<p>&nbsp; 输入节点 1:</p>
+<p>&nbsp; &nbsp; -&gt; 名称 (Name):&nbsp; images</p>
+<p>&nbsp; &nbsp; -&gt; 形状 (Shape): [1, 3, 640, 640]</p>
+<hr>
+<p>(base) root@davinci-mini:~/onnx_to_om#</p>
+<p>太好了！脚本成功运行，现在您已经获得了转换模型所需的最关键信息。</p>
+<p>根据脚本的输出：</p>
+<ul>
+<li>
+<p><strong>输入节点名称 (Name):</strong> <code>images</code></p>
+</li>
+<li>
+<p><strong>输入形状 (Shape):</strong> <code>[1, 3, 640, 640]</code></p>
+</li>
+</ul>
+<p>您现在拥有构建完整 <code>atc</code> 命令的所有要素。</p>
+<hr>
+<h3><strong>执行最终的转换命令</strong></h3>
+<p>接下来，请按照以下步骤操作，即可完成模型转换：</p>
+<ol>
+<li><strong>(最佳实践) 退出 <code>base</code> 环境</strong>，以确保环境纯净。</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    conda deactivate
+    </div></div><ol start="2">
+<li><strong>加载昇腾 CANN 工具包的环境变量</strong>。</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    <span class="hljs-built_in">source</span> /usr/local/Ascend/ascend-toolkit/set_env.sh
+    </div></div><ol start="3">
+<li><strong>运行下面的 <code>atc</code> 命令</strong>。您可以直接复制粘贴，这个命令已经根据您模型的信息配置好了：</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    atc --model=./yolo_best_20251018_233416.onnx \
+        --framework=5 \
+        --output=./yolo_best_640 \
+        --input_shape=<span class="hljs-string">"images:1,3,640,640"</span> \
+        --soc_version=Ascend310B4
+    </div></div><p><strong>命令解释：</strong></p>
+<ul>
+<li>
+<p><code>--output=./yolo_best_640</code>: 我为您指定了一个清晰的输出文件名前缀，最终会生成 <code>yolo_best_640.om</code> 文件。</p>
+</li>
+<li>
+<p><code>--input_shape="images:1,3,640,640"</code>: 这里使用了您刚刚通过脚本获取到的准确名称和形状。</p>
+</li>
+</ul>
+<p>执行后，如果没有报错并看到 <code>ATC run success</code> 的提示，就代表您的 ONNX 模型已经成功转换为了昇腾专用的 <code>.om</code> 离线模型。您可以通过 <code>ls</code> 命令查看新生成的文件。</p>
+<p>发生了什么</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# vim inspect_onnx.py</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# python3 inspect_onnx.py yolo_best_202510&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18_233416.onnx</p>
+<p>'yolo_best_20251018_233416.onnx' 的输入信息:</p>
+<hr>
+<p>&nbsp; 输入节点 1:</p>
+<p>&nbsp; &nbsp; -&gt; 名称 (Name):&nbsp; images</p>
+<p>&nbsp; &nbsp; -&gt; 形状 (Shape): [1, 3, 640, 640]</p>
+<hr>
+<p>(base) root@davinci-mini:~/onnx_to_om# ^C</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# conda deactivate</p>
+<p>root@davinci-mini:~/onnx_to_om# source /usr/local/Ascend/ascend-toolkit/set_env.sh</p>
+<p>root@davinci-mini:~/onnx_to_om# atc --model=./yolo_best_20251018_233416.onnx \</p>
+<p>&nbsp; &nbsp; --framework=5 \</p>
+<p>&nbsp; &nbsp; --output=./yolo_best_640 \</p>
+<p>&nbsp; &nbsp; --input_shape="images:1,3,640,640" \</p>
+<p>&nbsp; &nbsp; --soc_version=Ascend310B4</p>
+<p>ATC start working now, please wait for a moment.</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>/usr/local/Ascend/ascend-toolkit/latest/python/site-packages/tbe/dsl/unify_schedule/extract_image_patches_without_cbuf_schedule.py:317: SyntaxWarning: "is not" with a literal. Did you mean "!="?</p>
+<p>&nbsp; if _ is not 1:</p>
+<p>一切正常，模型正在转换中！您看到的这些信息是<strong>警告 (Warnings)</strong>，而不是<strong>错误 (Errors)</strong>，这是它们之间最大的区别。</p>
+<p>简单来说，<code>atc</code> 命令已经成功启动，并且正在处理您的模型。您只需要耐心等待它完成即可。</p>
+<hr>
+<h3><strong>这些警告信息是什么意思？</strong></h3>
+<p>让我们来分解一下这些无害的“系统通知”：</p>
+<ol>
+<li>
+<p><strong><code>UserWarning: A NumPy version ... is required ... (detected version ...)</code></strong></p>
+<ul>
+<li>
+<p><strong>含义</strong>：这是最常见的一种警告。它表示昇腾工具链内部使用的某个科学计算库 (SciPy) 是为某个特定范围的 NumPy 版本设计的，而您系统中的 NumPy 版本稍新一些。</p>
+</li>
+<li>
+<p><strong>影响</strong>：<strong>通常没有影响</strong>。这就像一个软件说“我最喜欢和 Windows 10 一起工作”，但它在 Windows 11 上也能正常运行。只要后续不出现真正的错误，就可以完全忽略它。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>ImportWarning: ... find_spec() not found; falling back to find_module()</code></strong></p>
+<ul>
+<li>
+<p><strong>含义</strong>：这是一个非常底层的 Python 内部警告。它在说“我用新方法加载模块失败了，但我会自动切换回老方法，并且成功了”。</p>
+</li>
+<li>
+<p><strong>影响</strong>：<strong>完全没有影响</strong>。这是工具内部自己的处理机制，对用户来说是透明的。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>SyntaxWarning: "is not" with a literal. Did you mean "!="?</code></strong></p>
+<ul>
+<li>
+<p><strong>含义</strong>：这是一个给昇腾软件开发者的代码风格建议。它在提示他们有一行代码可以写得更规范。</p>
+</li>
+<li>
+<p><strong>影响</strong>：<strong>对您来说完全没有影响</strong>。这不会改变程序的任何功能。</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><strong>总结和下一步</strong></h3>
+<ul>
+<li>
+<p><strong>当前状态</strong>：模型转换<strong>正在进行中</strong>。⏳</p>
+</li>
+<li>
+<p><strong>您看到的输出</strong>：是良性的<strong>系统警告</strong>，可以安全忽略。</p>
+</li>
+<li>
+<p><strong>您需要做的</strong>：<strong>等待</strong>。转换模型可能需要几十秒到几分钟的时间，具体取决于模型的大小和复杂性。</p>
+</li>
+</ul>
+<p>您最终会看到以下两种结果之一：</p>
+<ul>
+<li>
+<p><strong>成功</strong> 🎉：终端输出 <code>ATC run success</code>。</p>
+</li>
+<li>
+<p><strong>失败</strong> ❌：终端输出 <code>ATC run failed</code>，并附带具体的错误信息（<code>Error</code>）。</p>
+</li>
+</ul>
+<p>根据目前的情况，一切都在按预期进行。👍</p>
+<p>现在情况怎么样(base) root@davinci-mini:~/onnx_to_om# vim inspect_onnx.py</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# python3 inspect_onnx.py yolo_best_202510&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18_233416.onnx</p>
+<p>'yolo_best_20251018_233416.onnx' 的输入信息:</p>
+<hr>
+<p>&nbsp; 输入节点 1:</p>
+<p>&nbsp; &nbsp; -&gt; 名称 (Name):&nbsp; images</p>
+<p>&nbsp; &nbsp; -&gt; 形状 (Shape): [1, 3, 640, 640]</p>
+<hr>
+<p>(base) root@davinci-mini:~/onnx_to_om# ^C</p>
+<p>(base) root@davinci-mini:~/onnx_to_om# conda deactivate</p>
+<p>root@davinci-mini:~/onnx_to_om# source /usr/local/Ascend/ascend-toolkit/set_env.sh</p>
+<p>root@davinci-mini:~/onnx_to_om# atc --model=./yolo_best_20251018_233416.onnx \</p>
+<p>&nbsp; &nbsp; --framework=5 \</p>
+<p>&nbsp; &nbsp; --output=./yolo_best_640 \</p>
+<p>&nbsp; &nbsp; --input_shape="images:1,3,640,640" \</p>
+<p>&nbsp; &nbsp; --soc_version=Ascend310B4</p>
+<p>ATC start working now, please wait for a moment.</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>/usr/local/Ascend/ascend-toolkit/latest/python/site-packages/tbe/dsl/unify_schedule/extract_image_patches_without_cbuf_schedule.py:317: SyntaxWarning: "is not" with a literal. Did you mean "!="?</p>
+<p>&nbsp; if _ is not 1:</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>/usr/lib/python3/dist-packages/scipy/<strong>init</strong>.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4</p>
+<p>&nbsp; warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>:671: ImportWarning: TBEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>/usr/local/Ascend/ascend-toolkit/latest/python/site-packages/tbe/common/context/op_context.py:38: DeprecationWarning: currentThread() is deprecated, use current_thread() instead</p>
+<p>&nbsp; return _contexts.setdefault(threading.currentThread().ident, [])</p>
+<p>:914: ImportWarning: TEMetaPathFinder.find_spec() not found; falling back to find_module()</p>
+<p>:671: ImportWarning: TEMetaPathLoader.exec_module() not found; falling back to load_module()</p>
+<p>一切正常，<strong>模型仍在转换中</strong>。您看到的这一长串信息<strong>全部是无害的警告 (Warnings)，而不是致命的错误 (Errors)</strong>。</p>
+<hr>
+<h3><strong>核心结论</strong></h3>
+<p>您的 <code>atc</code> 命令已经成功启动并且正在努力工作。这些警告信息是昇腾工具链在运行时打印的内部日志，您可以安全地忽略它们。</p>
+<ul>
+<li>
+<p><strong><code>UserWarning: A NumPy version ...</code></strong>: 这是最常见的警告，意思是系统里的 NumPy 库版本比工具链预期的要新一点，但这通常不影响功能。</p>
+</li>
+<li>
+<p><strong><code>ImportWarning</code>, <code>SyntaxWarning</code>, <code>DeprecationWarning</code></strong>: 这些都是给昇腾软件开发人员看的内部提示，告诉他们代码里有些地方可以用更新、更规范的方式来写。<strong>对您转换模型没有任何影响</strong>。</p>
+</li>
+</ul>
+<hr>
+<h3><strong>您需要做什么？</strong></h3>
+<p><strong>什么都不用做，请继续等待。</strong> ⏳</p>
+<p>模型转换是一个复杂的过程，需要消耗一些时间。只要终端没有退出，并且没有出现以 <code>Error:</code> 开头的红色错误信息，就说明一切都在按计划进行。</p>
+<p>最终，您会看到以下两种结果之一：</p>
+<ol>
+<li>
+<p><strong>成功</strong> 🎉: 终端打印出 <code>ATC run success</code>。</p>
+</li>
+<li>
+<p><strong>失败</strong> ❌: 终端打印出 <code>ATC run failed</code>，并附带具体的错误原因。</p>
+</li>
+</ol>
+<p>根据目前的情况，一切看起来都很好。</p>
+<p>帮我写一个一键转换脚本</p>
+<p>好的，没问题。</p>
+<p>这是一个功能强大且用户友好的“一键转换”Shell脚本。它会自动完成您手动执行的所有步骤：</p>
+<ol>
+<li>
+<p><strong>自动调用Python</strong>来解析ONNX模型，获取输入名称和形状。</p>
+</li>
+<li>
+<p><strong>自动处理环境</strong>（退出conda，加载昇腾环境变量）。</p>
+</li>
+<li>
+<p><strong>自动生成并执行<code>atc</code>命令</strong>。</p>
+</li>
+<li>
+<p><strong>提供清晰的彩色状态反馈</strong>，告知您每一步的进展和最终结果。</p>
+</li>
+</ol>
+<hr>
+<h3><strong>第1步：创建脚本文件</strong></h3>
+<p>在您的 <code>/root/onnx_to_om/</code> 目录下，创建一个名为 <code>convert_onnx.sh</code> 的文件。</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-built_in">cd</span> /root/onnx_to_om/
+vim convert_onnx.sh</div></div><hr>
+<h3><strong>第2步：将以下代码粘贴到脚本中</strong></h3>
+<p>按 <code>i</code> 进入 <code>vim</code> 的插入模式，然后将下面框中的所有代码<strong>完整地复制并粘贴</strong>进去。</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-meta">#!/bin/bash</span>
+
+<span class="hljs-comment">#================================================================</span>
+<span class="hljs-comment"># 脚本名称: convert_onnx.sh</span>
+<span class="hljs-comment"># 功能:     一键将ONNX模型转换为昇腾OM模型。</span>
+<span class="hljs-comment">#           自动解析模型输入，设置环境，并执行atc转换。</span>
+<span class="hljs-comment"># 用法:     bash convert_onnx.sh &lt;你的模型.onnx&gt;</span>
+<span class="hljs-comment">#================================================================</span>
+
+<span class="hljs-comment"># --- 颜色定义 ---</span>
+GREEN=<span class="hljs-string">'\033[0;32m'</span>
+YELLOW=<span class="hljs-string">'\033[1;33m'</span>
+RED=<span class="hljs-string">'\033[0;31m'</span>
+NC=<span class="hljs-string">'\033[0m'</span> <span class="hljs-comment"># No Color</span>
+
+<span class="hljs-comment"># --- 1. 检查输入参数 ---</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">"<span class="hljs-variable">$#</span>"</span> -ne 1 ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${RED}</span>错误: 请提供一个ONNX模型文件作为参数。<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${YELLOW}</span>用法: bash <span class="hljs-variable">$0</span> &lt;你的模型.onnx&gt;<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+ONNX_FILE=<span class="hljs-variable">$1</span>
+<span class="hljs-keyword">if</span> [ ! -f <span class="hljs-string">"<span class="hljs-variable">$ONNX_FILE</span>"</span> ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${RED}</span>错误: 文件未找到: $ONNX_FILE<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>---&gt; 准备转换模型: <span class="hljs-variable">${ONNX_FILE}</span><span class="hljs-variable">${NC}</span>"</span>
+
+<span class="hljs-comment"># --- 2. 准备环境 ---</span>
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>---&gt; 正在设置昇腾CANN环境...<span class="hljs-variable">${NC}</span>"</span>
+<span class="hljs-comment"># 尝试退出conda环境，忽略可能出现的错误</span>
+conda deactivate &amp;&gt; /dev/null
+<span class="hljs-comment"># 加载昇腾工具包环境变量</span>
+<span class="hljs-built_in">source</span> /usr/local/Ascend/ascend-toolkit/set_env.sh
+
+<span class="hljs-comment"># --- 3. 使用内嵌Python脚本获取模型输入信息 ---</span>
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>---&gt; 正在使用Python解析模型输入信息...<span class="hljs-variable">${NC}</span>"</span>
+MODEL_INFO=$(python3 -c <span class="hljs-string">"
+import onnx, sys
+try:
+    model = onnx.load(sys.argv[1])
+    input_node = model.graph.input[0]
+    name = input_node.name
+    shape = [d.dim_value for d in input_node.type.tensor_type.shape.dim]
+    shape_str = ','.join(map(str, shape))
+    print(f'{name}:{shape_str}')
+except Exception as e:
+    sys.exit(1)
+"</span> <span class="hljs-string">"<span class="hljs-variable">$ONNX_FILE</span>"</span>)
+
+<span class="hljs-comment"># 检查Python脚本是否成功执行</span>
+<span class="hljs-keyword">if</span> [ $? -ne 0 ] || [ -z <span class="hljs-string">"<span class="hljs-variable">$MODEL_INFO</span>"</span> ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${RED}</span>错误: 解析ONNX模型失败。请确保'onnx'库已安装 (pip install onnx) 且模型文件有效。<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+INPUT_SHAPE_ARG=<span class="hljs-variable">$MODEL_INFO</span>
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>---&gt; 成功获取输入信息: <span class="hljs-variable">${YELLOW}</span><span class="hljs-variable">${INPUT_SHAPE_ARG}</span><span class="hljs-variable">${NC}</span>"</span>
+
+<span class="hljs-comment"># --- 4. 构建并执行atc命令 ---</span>
+<span class="hljs-comment"># 根据输入文件名自动生成输出文件名</span>
+OUTPUT_OM_PREFIX=<span class="hljs-string">"<span class="hljs-variable">${ONNX_FILE%.onnx}</span>"</span>
+SOC_VERSION=<span class="hljs-string">"Ascend310B4"</span>
+
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>---&gt; 准备执行atc转换命令...<span class="hljs-variable">${NC}</span>"</span>
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${YELLOW}</span>==================== ATC Command ====================<span class="hljs-variable">${NC}</span>"</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"atc --model=\"<span class="hljs-variable">$ONNX_FILE</span>\" \\"</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"    --framework=5 \\"</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"    --output=\"<span class="hljs-variable">$OUTPUT_OM_PREFIX</span>\" \\"</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"    --input_shape=\"<span class="hljs-variable">$INPUT_SHAPE_ARG</span>\" \\"</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"    --soc_version=<span class="hljs-variable">$SOC_VERSION</span>"</span>
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${YELLOW}</span>====================================================<span class="hljs-variable">${NC}</span>"</span>
+
+<span class="hljs-comment"># 执行命令</span>
+atc --model=<span class="hljs-string">"<span class="hljs-variable">$ONNX_FILE</span>"</span> \
+    --framework=5 \
+    --output=<span class="hljs-string">"<span class="hljs-variable">$OUTPUT_OM_PREFIX</span>"</span> \
+    --input_shape=<span class="hljs-string">"<span class="hljs-variable">$INPUT_SHAPE_ARG</span>"</span> \
+    --soc_version=<span class="hljs-variable">$SOC_VERSION</span>
+
+<span class="hljs-comment"># --- 5. 检查结果 ---</span>
+<span class="hljs-keyword">if</span> [ $? -eq 0 ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"\n<span class="hljs-variable">${GREEN}</span>====================================================<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>🎉 转换成功! 🎉<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>OM模型已生成: <span class="hljs-variable">${YELLOW}</span><span class="hljs-variable">${OUTPUT_OM_PREFIX}</span>.om<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${GREEN}</span>====================================================<span class="hljs-variable">${NC}</span>"</span>
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"\n<span class="hljs-variable">${RED}</span>====================================================<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${RED}</span>🔥 转换失败! 🔥<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${RED}</span>请检查上面的atc日志以获取详细错误信息。<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"<span class="hljs-variable">${RED}</span>====================================================<span class="hljs-variable">${NC}</span>"</span>
+    <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-built_in">exit</span> 0</div></div><p>粘贴完成后，按 <code>Esc</code> 键，然后输入 <code>:wq</code> 并回车，保存并退出 <code>vim</code>。</p>
+<hr>
+<h3><strong>第3步：给脚本添加执行权限</strong></h3>
+<p>这是一个非常重要的一步。运行以下命令，让脚本文件变得可以执行。</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-built_in">chmod</span> +x convert_onnx.sh</div></div><hr>
+<h3><strong>第4步：一键执行！</strong></h3>
+<p>现在，您可以像使用一个系统命令一样来运行这个脚本了。</p>
+<p><strong>用法非常简单：<code>./convert_onnx.sh &lt;你的模型文件名&gt;</code></strong></p>
+<p>例如，要转换 <code>yolo_best_20251018_233416.onnx</code>，您只需运行：</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">./convert_onnx.sh yolo_best_20251018_233416.onnx</div></div><p><strong>如果要转换另一个模型，比如 <code>another_model.onnx</code>，则运行：</strong></p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">./convert_onnx.sh another_model.onnx</div></div><p>脚本会自动完成所有工作，并告诉您最终是成功还是失败。成功后，它会在当前目录下生成一个同名的 <code>.om</code> 文件。</p>
+<p>将加载pt模型改为使用昇腾npu加载om模型；参考代码# -<em>- coding: utf-8 -</em>-</p>
+<p>import cv2</p>
+<p>import os</p>
+<p>from ultralytics import YOLO</p>
+<p>import numpy as np</p>
+<p>import multiprocessing as mp</p>
+<p>import time</p>
+<p>from queue import Empty # 导入Empty异常</p>
+<p>def frame_producer(q_in):</p>
+<p>&nbsp; &nbsp; """</p>
+<p>&nbsp; &nbsp; 进程1: 帧生产者。</p>
+<p>&nbsp; &nbsp; 负责从视频流抓取帧，并放入输入队列。</p>
+<p>&nbsp; &nbsp; """</p>
+<p>&nbsp; &nbsp; stream_url = "<a href="http://192.168.5.100:8080/stream">http://192.168.5.100:8080/stream</a>"</p>
+<p>&nbsp; &nbsp; cap = cv2.VideoCapture(stream_url)</p>
+<p>&nbsp; &nbsp; if not cap.isOpened():</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; print("[Producer] ❌ 错误: 无法打开视频流。")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return</p>
+<p>&nbsp; &nbsp; print("[Producer] ✅ 视频流连接成功。")</p>
+<p>&nbsp; &nbsp; while True:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; ret, frame = cap.read()</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if not ret:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("[Producer] 🟡 视频流中断，正在尝试重连...")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; time.sleep(1)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cap.release()</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cap = cv2.VideoCapture(stream_url)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # --- 修正后的逻辑 ---</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # 目标：确保队列里只有最新的帧。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # 先尝试非阻塞地清空队列，如果队列本身是空的，就忽略异常。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; try:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; q_in.get_nowait()</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; except Empty:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # 然后放入最新的帧。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; q_in.put(frame)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # --- 修正结束 ---</p>
+<p>def inference_consumer(q_in, q_out):</p>
+<p>&nbsp; &nbsp; """</p>
+<p>&nbsp; &nbsp; 进程2: 推理消费者。</p>
+<p>&nbsp; &nbsp; 从输入队列获取帧，进行多模型推理，然后将结果放入输出队列。</p>
+<p>&nbsp; &nbsp; """</p>
+<p>&nbsp; &nbsp; current_dir = os.path.dirname(os.path.abspath(<strong>file</strong>))</p>
+<p>&nbsp; &nbsp; colors = [</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; (255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; (0, 255, 255), (255, 0, 255), (192, 192, 192), (128, 0, 128)</p>
+<p>&nbsp; &nbsp; ]</p>
+<p>&nbsp; &nbsp; model_paths = [f for f in os.listdir(current_dir) if f.endswith('.pt')]</p>
+<p>&nbsp; &nbsp; if not model_paths:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; print("[Consumer] ❌ 错误: 未找到任何 .pt 模型文件。")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return</p>
+<p>&nbsp; &nbsp; models = {}</p>
+<p>&nbsp; &nbsp; print("[Consumer] 🔍 正在加载模型...")</p>
+<p>&nbsp; &nbsp; for i, model_name in enumerate(model_paths):</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; try:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; models[model_name] = {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "model": YOLO(os.path.join(current_dir, model_name)),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "color": colors[i % len(colors)]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"[Consumer] &nbsp; ✅ 已加载: {model_name}")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; except Exception as e:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(f"[Consumer] &nbsp; ❌ 加载失败: {model_name}, 错误: {e}")</p>
+<p>&nbsp; &nbsp; if not models:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; print("[Consumer] ❌ 错误: 没有任何模型被成功加载。")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return</p>
+<p>&nbsp; &nbsp; while True:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; frame = q_in.get() # 从输入队列获取帧</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if frame is None: # 结束信号</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # 对帧进行推理和绘制</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; for model_name, model_info in models.items():</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; model, color = model_info["model"], model_info["color"]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; results = model(frame, verbose=False, conf=0.4)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for r in results:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for box in r.boxes:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x1, y1, x2, y2 = map(int, box.xyxy[0])</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; conf, cls_id = float(box.conf[0]), int(box.cls[0])</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label = f'{model_name}: {model.names[cls_id]} {conf:.2f}'</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cv2.rectangle(frame, (x1, y1 - 20), (x1 + len(label) * 10, y1), color, -1)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cv2.putText(frame, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # 绘制图例</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; legend_y = 20</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; for model_name, model_info in models.items():</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color = model_info["color"]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; legend_text = f"- {model_name}"</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cv2.putText(frame, legend_text, (10, legend_y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 3)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cv2.putText(frame, legend_text, (10, legend_y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, model_info["color"], 2)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; legend_y += 25</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if q_out.full():</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; q_out.get_nowait() # 丢弃旧的已处理帧</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; q_out.put(frame)</p>
+<p>if <strong>name</strong> == "<strong>main</strong>":</p>
+<p>&nbsp; &nbsp; # 在Windows上使用多进程，建议加上这句</p>
+<p>&nbsp; &nbsp; mp.set_start_method('spawn', force=True)</p>
+<p>&nbsp; &nbsp; input_queue = mp.Queue(maxsize=1)</p>
+<p>&nbsp; &nbsp; output_queue = mp.Queue(maxsize=1)</p>
+<p>&nbsp; &nbsp; producer_process = mp.Process(target=frame_producer, args=(input_queue,))</p>
+<p>&nbsp; &nbsp; consumer_process = mp.Process(target=inference_consumer, args=(input_queue, output_queue,))</p>
+<p>&nbsp; &nbsp; producer_process.start()</p>
+<p>&nbsp; &nbsp; consumer_process.start()</p>
+<p>&nbsp; &nbsp; print("[Main] ✅ 主程序启动，等待处理后的帧...")</p>
+<p>&nbsp; &nbsp; print("[Main] 按 'q' 键退出。")</p>
+<p>&nbsp; &nbsp; while True:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; try:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; frame = output_queue.get(timeout=5) # 增加超时时间以应对模型加载</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cv2.imshow('Live Multi-Model Detection (Optimized)', frame)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if cv2.waitKey(1) &amp; 0xFF == ord('q'):</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; except Empty:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if not consumer_process.is_alive() or not producer_process.is_alive():</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("[Main] 🟡 一个或多个子进程已停止，程序退出。")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("[Main] 🟡 等待处理结果超时...")</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue</p>
+<p>&nbsp; &nbsp; print("[Main] 正在关闭...")</p>
+<p>&nbsp; &nbsp; producer_process.terminate()</p>
+<p>&nbsp; &nbsp; consumer_process.terminate()</p>
+<p>&nbsp; &nbsp; producer_process.join()</p>
+<p>&nbsp; &nbsp; consumer_process.join()</p>
+<p>&nbsp; &nbsp; cv2.destroyAllWindows()；模型位置</p>
+<p>root@davinci-mini:~/onnx_to_om# ls</p>
+<p>best.pt&nbsp; fusion_result.json&nbsp; inspect_onnx.py&nbsp; last.pt&nbsp; yolo_best_20251002_155016.onnx&nbsp; yolo_best_20251018_233416.onnx&nbsp; yolo_best_640.om</p>
+<p>root@davinci-mini:~/onnx_to_om#</p>
+<p>好的，将 YOLOv8 的推理代码从使用 <code>ultralytics</code> (.pt) 迁移到昇腾 NPU (.om) 是一个常见的需求，这能极大地提升在 Atlas 开发板上的运行速度。</p>
+<p>这个修改的核心是<strong>用华为的 <code>aclruntime</code> 库替换 <code>ultralytics.YOLO</code> 库</strong>。<code>aclruntime</code> 是 pyACL (Python Ascend Computing Language) 的一部分，专门用于在昇腾硬件上加载并执行 <code>.om</code> 模型。</p>
+<p>这涉及到几个关键步骤：</p>
+<ol>
+<li>
+<p><strong>加载 OM 模型</strong>: 使用 <code>aclruntime</code> 加载 <code>yolo_best_640.om</code> 文件。</p>
+</li>
+<li>
+<p><strong>图像预处理 (Pre-processing)</strong>: OpenCV 读取的图像是 HWC、BGR 格式的 <code>uint8</code> 数据。而 YOLO 模型需要的是 CHW、RGB 格式的 <code>float32</code> 数据，并且尺寸要严格匹配模型（例如 640x640）。<strong>这一步必须在 NPU 推理前完成</strong>。</p>
+</li>
+<li>
+<p><strong>执行推理 (Inference)</strong>: 将预处理后的数据送入 NPU 计算。</p>
+</li>
+<li>
+<p><strong>结果后处理 (Post-processing)</strong>: NPU 的原始输出是巨大的数字张量 (Tensor)，需要对其进行解析，通过置信度过滤和非极大值抑制 (NMS) 来得到最终的边界框、类别和分数。</p>
+</li>
+</ol>
+<p>下面是为您修改好的完整代码。</p>
+<hr>
+<h3><strong>前提条件：安装 <code>aclruntime</code></strong></h3>
+<p>首先，请确保您已经在 Atlas 开发板的环境中安装了 <code>aclruntime</code>。</p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-comment"># 在您的 (base) 或其他 Python 环境中执行</span>
+pip install aclruntime</div></div><hr>
+<h3><strong>修改后的代码</strong></h3>
+<p>这个新版本引入了一个 <code>AscendYolo</code> 辅助类，专门用来封装所有与 NPU 相关的复杂操作，使主逻辑保持清晰。</p>
+<p><strong>请将以下完整代码保存为一个新的 Python 文件（例如 <code>npu_yolo_stream.py</code>）并放在 <code>/root/onnx_to_om/</code> 目录下。</strong></p><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">python</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">import</span> cv2
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> multiprocessing <span class="hljs-keyword">as</span> mp
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> queue <span class="hljs-keyword">import</span> Empty
+<span class="hljs-keyword">from</span> aclruntime <span class="hljs-keyword">import</span> AclLiteModel <span class="hljs-comment"># 导入昇腾推理库</span>
+
+<span class="hljs-comment"># --- 类别名称定义 ---</span>
+<span class="hljs-comment"># OM模型本身不包含类别名称，需要我们手动提供。</span>
+<span class="hljs-comment"># 请根据您模型训练的类别进行修改。</span>
+CLASS_NAMES = [
+    <span class="hljs-string">'person'</span>, <span class="hljs-string">'bicycle'</span>, <span class="hljs-string">'car'</span>, <span class="hljs-string">'motorcycle'</span>, <span class="hljs-string">'airplane'</span>, <span class="hljs-string">'bus'</span>, <span class="hljs-string">'train'</span>, <span class="hljs-string">'truck'</span>, <span class="hljs-string">'boat'</span>, <span class="hljs-string">'traffic light'</span>,
+    <span class="hljs-string">'fire hydrant'</span>, <span class="hljs-string">'stop sign'</span>, <span class="hljs-string">'parking meter'</span>, <span class="hljs-string">'bench'</span>, <span class="hljs-string">'bird'</span>, <span class="hljs-string">'cat'</span>, <span class="hljs-string">'dog'</span>, <span class="hljs-string">'horse'</span>, <span class="hljs-string">'sheep'</span>, <span class="hljs-string">'cow'</span>,
+    <span class="hljs-string">'elephant'</span>, <span class="hljs-string">'bear'</span>, <span class="hljs-string">'zebra'</span>, <span class="hljs-string">'giraffe'</span>, <span class="hljs-string">'backpack'</span>, <span class="hljs-string">'umbrella'</span>, <span class="hljs-string">'handbag'</span>, <span class="hljs-string">'tie'</span>, <span class="hljs-string">'suitcase'</span>, <span class="hljs-string">'frisbee'</span>,
+    <span class="hljs-string">'skis'</span>, <span class="hljs-string">'snowboard'</span>, <span class="hljs-string">'sports ball'</span>, <span class="hljs-string">'kite'</span>, <span class="hljs-string">'baseball bat'</span>, <span class="hljs-string">'baseball glove'</span>, <span class="hljs-string">'skateboard'</span>, <span class="hljs-string">'surfboard'</span>,
+    <span class="hljs-string">'tennis racket'</span>, <span class="hljs-string">'bottle'</span>, <span class="hljs-string">'wine glass'</span>, <span class="hljs-string">'cup'</span>, <span class="hljs-string">'fork'</span>, <span class="hljs-string">'knife'</span>, <span class="hljs-string">'spoon'</span>, <span class="hljs-string">'bowl'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'apple'</span>,
+    <span class="hljs-string">'sandwich'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'broccoli'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'hot dog'</span>, <span class="hljs-string">'pizza'</span>, <span class="hljs-string">'donut'</span>, <span class="hljs-string">'cake'</span>, <span class="hljs-string">'chair'</span>, <span class="hljs-string">'couch'</span>,
+    <span class="hljs-string">'potted plant'</span>, <span class="hljs-string">'bed'</span>, <span class="hljs-string">'dining table'</span>, <span class="hljs-string">'toilet'</span>, <span class="hljs-string">'tv'</span>, <span class="hljs-string">'laptop'</span>, <span class="hljs-string">'mouse'</span>, <span class="hljs-string">'remote'</span>, <span class="hljs-string">'keyboard'</span>, <span class="hljs-string">'cell phone'</span>,
+    <span class="hljs-string">'microwave'</span>, <span class="hljs-string">'oven'</span>, <span class="hljs-string">'toaster'</span>, <span class="hljs-string">'sink'</span>, <span class="hljs-string">'refrigerator'</span>, <span class="hljs-string">'book'</span>, <span class="hljs-string">'clock'</span>, <span class="hljs-string">'vase'</span>, <span class="hljs-string">'scissors'</span>, <span class="hljs-string">'teddy bear'</span>,
+    <span class="hljs-string">'hair drier'</span>, <span class="hljs-string">'toothbrush'</span>
+] <span class="hljs-comment"># COCO 80 classes example</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">AscendYolo</span>:
+    <span class="hljs-string">"""
+    用于封装昇腾NPU模型推理的辅助类
+    """</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, model_path, model_width=<span class="hljs-number">640</span>, model_height=<span class="hljs-number">640</span>, conf_thres=<span class="hljs-number">0.4</span>, iou_thres=<span class="hljs-number">0.5</span></span>):
+        <span class="hljs-variable language_">self</span>.model_path = model_path
+        <span class="hljs-variable language_">self</span>.model_width = model_width
+        <span class="hljs-variable language_">self</span>.model_height = model_height
+        <span class="hljs-variable language_">self</span>.conf_threshold = conf_thres
+        <span class="hljs-variable language_">self</span>.iou_threshold = iou_thres
+        
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"[AscendYOLO] 正在加载模型: <span class="hljs-subst">{model_path}</span>"</span>)
+        <span class="hljs-variable language_">self</span>.model = AclLiteModel(model_path)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"[AscendYOLO] ✅ 模型加载成功。"</span>)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">preprocess</span>(<span class="hljs-params">self, frame</span>):
+        <span class="hljs-string">"""图像预处理：resize, BGR-&gt;RGB, HWC-&gt;CHW, uint8-&gt;float32"""</span>
+        h, w, _ = frame.shape
+        <span class="hljs-comment"># 1. Resize并填充以保持宽高比</span>
+        scale = <span class="hljs-built_in">min</span>(<span class="hljs-variable language_">self</span>.model_width / w, <span class="hljs-variable language_">self</span>.model_height / h)
+        resized_w, resized_h = <span class="hljs-built_in">int</span>(w * scale), <span class="hljs-built_in">int</span>(h * scale)
+        resized_frame = cv2.resize(frame, (resized_w, resized_h))
+        
+        <span class="hljs-comment"># 2. 创建一个灰色的画布</span>
+        padded_frame = np.full((<span class="hljs-variable language_">self</span>.model_height, <span class="hljs-variable language_">self</span>.model_width, <span class="hljs-number">3</span>), <span class="hljs-number">114</span>, dtype=np.uint8)
+        
+        <span class="hljs-comment"># 3. 将resize后的图像粘贴到画布中央</span>
+        top = (<span class="hljs-variable language_">self</span>.model_height - resized_h) // <span class="hljs-number">2</span>
+        left = (<span class="hljs-variable language_">self</span>.model_width - resized_w) // <span class="hljs-number">2</span>
+        padded_frame[top:top+resized_h, left:left+resized_w] = resized_frame
+        
+        <span class="hljs-comment"># 4. BGR -&gt; RGB, HWC -&gt; CHW, to float32</span>
+        rgb_frame = cv2.cvtColor(padded_frame, cv2.COLOR_BGR2RGB)
+        transposed_frame = rgb_frame.transpose((<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>))
+        input_tensor = np.ascontiguousarray(transposed_frame, dtype=np.float32) / <span class="hljs-number">255.0</span>
+        
+        <span class="hljs-keyword">return</span> input_tensor[np.newaxis, :], (h, w), (scale, left, top)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">inference</span>(<span class="hljs-params">self, input_tensor</span>):
+        <span class="hljs-string">"""执行推理"""</span>
+        result_list = <span class="hljs-variable language_">self</span>.model.execute([input_tensor])
+        <span class="hljs-keyword">return</span> result_list[<span class="hljs-number">0</span>]
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">postprocess</span>(<span class="hljs-params">self, raw_output, original_shape, transform_params</span>):
+        <span class="hljs-string">"""结果后处理：解析输出，NMS，缩放边界框"""</span>
+        detections = []
+        
+        <span class="hljs-comment"># raw_output shape is (1, 84, 8400) for YOLOv8</span>
+        <span class="hljs-comment"># (cx, cy, w, h, cls_conf...)</span>
+        output_data = raw_output[<span class="hljs-number">0</span>].T <span class="hljs-comment"># Transpose to (8400, 84)</span>
+        
+        scores = np.<span class="hljs-built_in">max</span>(output_data[:, <span class="hljs-number">4</span>:], axis=<span class="hljs-number">1</span>)
+        <span class="hljs-comment"># 快速过滤掉大部分低置信度的框</span>
+        valid_indices = scores &gt; <span class="hljs-variable language_">self</span>.conf_threshold
+        
+        box_data = output_data[valid_indices]
+        scores = scores[valid_indices]
+        
+        class_ids = np.argmax(box_data[:, <span class="hljs-number">4</span>:], axis=<span class="hljs-number">1</span>)
+        
+        <span class="hljs-comment"># 坐标转换 cxcywh -&gt; xyxy</span>
+        boxes = <span class="hljs-variable language_">self</span>._cxcywh_to_xyxy(box_data[:, :<span class="hljs-number">4</span>])
+        
+        <span class="hljs-comment"># NMS</span>
+        indices = cv2.dnn.NMSBoxes(boxes.tolist(), scores.tolist(), <span class="hljs-variable language_">self</span>.conf_threshold, <span class="hljs-variable language_">self</span>.iou_threshold)
+        
+        orig_h, orig_w = original_shape
+        scale, pad_left, pad_top = transform_params
+        
+        <span class="hljs-comment"># 缩放回原始图像尺寸</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> indices:
+            x1, y1, x2, y2 = boxes[i]
+            
+            <span class="hljs-comment"># 移除填充</span>
+            x1 = (x1 - pad_left) / scale
+            y1 = (y1 - pad_top) / scale
+            x2 = (x2 - pad_left) / scale
+            y2 = (y2 - pad_top) / scale
+            
+            <span class="hljs-comment"># 裁剪到图像边界</span>
+            x1 = <span class="hljs-built_in">max</span>(<span class="hljs-number">0</span>, x1)
+            y1 = <span class="hljs-built_in">max</span>(<span class="hljs-number">0</span>, y1)
+            x2 = <span class="hljs-built_in">min</span>(orig_w, x2)
+            y2 = <span class="hljs-built_in">min</span>(orig_h, y2)
+            
+            detections.append([<span class="hljs-built_in">int</span>(x1), <span class="hljs-built_in">int</span>(y1), <span class="hljs-built_in">int</span>(x2), <span class="hljs-built_in">int</span>(y2), <span class="hljs-built_in">float</span>(scores[i]), <span class="hljs-built_in">int</span>(class_ids[i])])
+            
+        <span class="hljs-keyword">return</span> detections
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_cxcywh_to_xyxy</span>(<span class="hljs-params">self, x</span>):
+        y = np.copy(x)
+        y[:, <span class="hljs-number">0</span>] = x[:, <span class="hljs-number">0</span>] - x[:, <span class="hljs-number">2</span>] / <span class="hljs-number">2</span>  <span class="hljs-comment"># top left x</span>
+        y[:, <span class="hljs-number">1</span>] = x[:, <span class="hljs-number">1</span>] - x[:, <span class="hljs-number">3</span>] / <span class="hljs-number">2</span>  <span class="hljs-comment"># top left y</span>
+        y[:, <span class="hljs-number">2</span>] = x[:, <span class="hljs-number">0</span>] + x[:, <span class="hljs-number">2</span>] / <span class="hljs-number">2</span>  <span class="hljs-comment"># bottom right x</span>
+        y[:, <span class="hljs-number">3</span>] = x[:, <span class="hljs-number">1</span>] + x[:, <span class="hljs-number">3</span>] / <span class="hljs-number">2</span>  <span class="hljs-comment"># bottom right y</span>
+        <span class="hljs-keyword">return</span> y
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">frame_producer</span>(<span class="hljs-params">q_in</span>):
+    <span class="hljs-string">"""进程1: 帧生产者 (与原版相同)"""</span>
+    stream_url = <span class="hljs-string">"http://192.168.5.100:8080/stream"</span>
+    cap = cv2.VideoCapture(stream_url)
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> cap.isOpened():
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Producer] ❌ 错误: 无法打开视频流。"</span>)
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Producer] ✅ 视频流连接成功。"</span>)
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+        ret, frame = cap.read()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> ret:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Producer] 🟡 视频流中断，正在尝试重连..."</span>)
+            time.sleep(<span class="hljs-number">1</span>)
+            cap.release()
+            cap = cv2.VideoCapture(stream_url)
+            <span class="hljs-keyword">continue</span>
+        
+        <span class="hljs-keyword">try</span>:
+            q_in.get_nowait()
+        <span class="hljs-keyword">except</span> Empty:
+            <span class="hljs-keyword">pass</span>
+        q_in.put(frame)
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">inference_consumer</span>(<span class="hljs-params">q_in, q_out</span>):
+    <span class="hljs-string">"""进程2: 推理消费者 (已修改为使用昇腾NPU)"""</span>
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    colors = [
+        (<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), (<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>), (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>), (<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>),
+        (<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>), (<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>), (<span class="hljs-number">192</span>, <span class="hljs-number">192</span>, <span class="hljs-number">192</span>), (<span class="hljs-number">128</span>, <span class="hljs-number">0</span>, <span class="hljs-number">128</span>)
+    ]
+
+    model_paths = [f <span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> os.listdir(current_dir) <span class="hljs-keyword">if</span> f.endswith(<span class="hljs-string">'.om'</span>)] <span class="hljs-comment"># &lt;-- 搜索 .om 文件</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> model_paths:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Consumer] ❌ 错误: 未找到任何 .om 模型文件。"</span>)
+        <span class="hljs-keyword">return</span>
+
+    models = {}
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Consumer] 🔍 正在加载昇腾 (.om) 模型..."</span>)
+    <span class="hljs-keyword">for</span> i, model_name <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(model_paths):
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-comment"># &lt;-- 使用新的 AscendYolo 类加载模型</span>
+            model_instance = AscendYolo(os.path.join(current_dir, model_name), model_width=<span class="hljs-number">640</span>, model_height=<span class="hljs-number">640</span>)
+            models[model_name] = {
+                <span class="hljs-string">"model"</span>: model_instance,
+                <span class="hljs-string">"color"</span>: colors[i % <span class="hljs-built_in">len</span>(colors)]
+            }
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"[Consumer] &nbsp; ✅ 已加载: <span class="hljs-subst">{model_name}</span>"</span>)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"[Consumer] &nbsp; ❌ 加载失败: <span class="hljs-subst">{model_name}</span>, 错误: <span class="hljs-subst">{e}</span>"</span>)
+
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> models:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Consumer] ❌ 错误: 没有任何模型被成功加载。"</span>)
+        <span class="hljs-keyword">return</span>
+
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+        frame = q_in.get()
+        <span class="hljs-keyword">if</span> frame <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            <span class="hljs-keyword">break</span>
+
+        <span class="hljs-comment"># 对帧进行推理和绘制</span>
+        <span class="hljs-keyword">for</span> model_name, model_info <span class="hljs-keyword">in</span> models.items():
+            model, color = model_info[<span class="hljs-string">"model"</span>], model_info[<span class="hljs-string">"color"</span>]
+            
+            <span class="hljs-comment"># 1. 预处理</span>
+            input_tensor, original_shape, transform_params = model.preprocess(frame)
+            <span class="hljs-comment"># 2. 推理</span>
+            raw_output = model.inference(input_tensor)
+            <span class="hljs-comment"># 3. 后处理</span>
+            detections = model.postprocess(raw_output, original_shape, transform_params)
+            
+            <span class="hljs-keyword">for</span> (x1, y1, x2, y2, conf, cls_id) <span class="hljs-keyword">in</span> detections:
+                class_name = CLASS_NAMES[cls_id] <span class="hljs-keyword">if</span> cls_id &lt; <span class="hljs-built_in">len</span>(CLASS_NAMES) <span class="hljs-keyword">else</span> <span class="hljs-string">'Unknown'</span>
+                label = <span class="hljs-string">f'<span class="hljs-subst">{os.path.splitext(model_name)[<span class="hljs-number">0</span>]}</span>: <span class="hljs-subst">{class_name}</span> <span class="hljs-subst">{conf:<span class="hljs-number">.2</span>f}</span>'</span>
+                cv2.rectangle(frame, (x1, y1), (x2, y2), color, <span class="hljs-number">2</span>)
+                cv2.rectangle(frame, (x1, y1 - <span class="hljs-number">20</span>), (x1 + <span class="hljs-built_in">len</span>(label) * <span class="hljs-number">10</span>, y1), color, -<span class="hljs-number">1</span>)
+                cv2.putText(frame, label, (x1, y1 - <span class="hljs-number">5</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="hljs-number">0.5</span>, (<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>), <span class="hljs-number">2</span>)
+
+        <span class="hljs-comment"># 绘制图例</span>
+        legend_y = <span class="hljs-number">20</span>
+        <span class="hljs-keyword">for</span> model_name, model_info <span class="hljs-keyword">in</span> models.items():
+            legend_text = <span class="hljs-string">f"- <span class="hljs-subst">{os.path.splitext(model_name)[<span class="hljs-number">0</span>]}</span>"</span>
+            cv2.putText(frame, legend_text, (<span class="hljs-number">10</span>, legend_y), cv2.FONT_HERSHEY_SIMPLEX, <span class="hljs-number">0.6</span>, (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), <span class="hljs-number">3</span>)
+            cv2.putText(frame, legend_text, (<span class="hljs-number">10</span>, legend_y), cv2.FONT_HERSHEY_SIMPLEX, <span class="hljs-number">0.6</span>, model_info[<span class="hljs-string">"color"</span>], <span class="hljs-number">2</span>)
+            legend_y += <span class="hljs-number">25</span>
+        
+        <span class="hljs-keyword">if</span> q_out.full():
+            q_out.get_nowait()
+        q_out.put(frame)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    mp.set_start_method(<span class="hljs-string">'spawn'</span>, force=<span class="hljs-literal">True</span>)
+
+    input_queue = mp.Queue(maxsize=<span class="hljs-number">1</span>)
+    output_queue = mp.Queue(maxsize=<span class="hljs-number">1</span>)
+
+    producer_process = mp.Process(target=frame_producer, args=(input_queue,))
+    consumer_process = mp.Process(target=inference_consumer, args=(input_queue, output_queue,))
+
+    producer_process.start()
+    consumer_process.start()
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Main] ✅ 主程序启动，等待处理后的帧..."</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Main] 按 'q' 键退出。"</span>)
+
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+        <span class="hljs-keyword">try</span>:
+            frame = output_queue.get(timeout=<span class="hljs-number">5</span>)
+            cv2.imshow(<span class="hljs-string">'Live Multi-Model Detection (Ascend NPU)'</span>, frame)
+            
+            <span class="hljs-keyword">if</span> cv2.waitKey(<span class="hljs-number">1</span>) &amp; <span class="hljs-number">0xFF</span> == <span class="hljs-built_in">ord</span>(<span class="hljs-string">'q'</span>):
+                <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">except</span> Empty:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> consumer_process.is_alive() <span class="hljs-keyword">or</span> <span class="hljs-keyword">not</span> producer_process.is_alive():
+                <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Main] 🟡 一个或多个子进程已停止，程序退出。"</span>)
+                <span class="hljs-keyword">break</span>
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Main] 🟡 等待处理结果超时..."</span>)
+            <span class="hljs-keyword">continue</span>
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"[Main] 正在关闭..."</span>)
+    producer_process.terminate()
+    consumer_process.terminate()
+    producer_process.join()
+    consumer_process.join()
+    cv2.destroyAllWindows()</div></div><h3><strong>如何运行</strong></h3>
+<ol>
+<li>
+<p><strong>保存代码</strong>: 将上面的代码保存为 <code>npu_yolo_stream.py</code> 文件，并确保它和您的 <code>yolo_best_640.om</code> 文件在同一个目录 (<code>/root/onnx_to_om/</code>) 下。</p>
+</li>
+<li>
+<p><strong>修改类别</strong>: 检查代码顶部的 <code>CLASS_NAMES</code> 列表，确保它与您模型训练的类别顺序一致。我这里放了标准的COCO数据集的80个类别作为示例。</p>
+</li>
+<li>
+<p><strong>运行脚本</strong>:</p>
+</li>
+</ol><div data-019415eb-8fc0-7859-afc9-8c8d46c4802c="true" class="doc2x-markdown-code-view rounded-[8px] overflow-hidden"><div class="code-header text-[14px] justify-between flex items-center p-2 bg-gray shadow-"><div class="left">bash</div><div class="right cursor-pointer"><div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"></path><path d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"></path></g></svg><span class="inline-block ml-2">复制</span></div></div></div><div class="code-content fira-code-family bg-surfaceGray p-2 text-[12px] whitespace-pre-wrap break-words overflow-x-auto">    python3 npu_yolo_stream.py
+    </div></div><p>现在，程序将会自动查找所有 <code>.om</code> 文件，使用昇腾 NPU 进行硬件加速推理，并将结果显示在视频流上。您应该会观察到比之前 CPU 推理流畅得多的画面。</p></div></div></div>
+      </body>
+    </html>
+  
